@@ -1,7 +1,70 @@
 @import "tailwindcss";
 
+html,
+body {
+  overflow-x: hidden;
+}
+
+* {
+  font-feature-settings: "ss01" on, "frac" on, "cv01" on, "cv09" on, "cv03" on,
+    "cv10" on, "cv05" on, "calt" on;
+  text-rendering: geometricPrecision;
+  text-wrap: balance;
+  outline: 0px solid transparent !important;
+  outline-offset: 0px !important;
+  scroll-behavior: smooth !important;
+  scrollbar-color: var(--scrollbar) rgba(255, 255, 255, 0.01);
+  scrollbar-width: thin;
+}
+
+*::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+*::-webkit-scrollbar-thumb {
+  background-color: var(--scrollbar);
+  border-radius: 6px;
+  transition: background-color 0.3s;
+}
+*::-webkit-scrollbar-thumb:hover {
+  background-color: var(--scrollbar-hover);
+}
+:root {
+  --scrollbar: rgba(234, 234, 234, 0.55);
+  --scrollbar-hover: rgba(234, 234, 234, 0.88);
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --scrollbar: rgba(40, 40, 40, 0.9);
+    --scrollbar-hover: rgba(129, 66, 66, 0.88);
+  }
+}
+::-webkit-slider-thumb {
+  z-index: 2000;
+  position: relative;
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  background-color: #4c94ff;
+  border-radius: 50%;
+  cursor: pointer;
+}
+::-moz-range-thumb {
+  z-index: 2000;
+  position: relative;
+  width: 15px;
+  height: 15px;
+  background-color: #4c94ff;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.text-md {
+  font-size: 15px;
+}
+
 ::selection {
-  background-color: #47a3f3;
+  background-color: #8924e7c4;
   color: #fefefe;
 }
 
@@ -35,7 +98,6 @@ html {
 
 .prose .anchor {
   @apply absolute invisible no-underline;
-
   margin-left: -1em;
   padding-right: 0.5em;
   width: 80%;
@@ -145,6 +207,38 @@ table {
   white-space: nowrap;
 }
 
-.title {
-  text-wrap: balance;
+@layer utilities {
+  .skeleton {
+    @apply relative overflow-hidden bg-zinc-300/50 dark:bg-[#27272a5e];
+  }
+  .skeleton::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.32),
+      transparent
+    );
+    animation: skeleton-wave 1.7s infinite;
+  }
+  @media (prefers-color-scheme: dark) {
+    .skeleton::after {
+      background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.064),
+        transparent
+      );
+    }
+  }
+  @keyframes skeleton-wave {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
 }

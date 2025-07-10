@@ -8,7 +8,7 @@
 
 ### Clone and Deploy
 
-Execute [`git clone`](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository) to bootstrap the example:
+Execute [`git clone`](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository) to bootstrap the project:
 
 ```bash
 git clone https://github.com/randseas/portfolio

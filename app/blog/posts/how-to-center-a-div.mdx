@@ -1,0 +1,120 @@
+---
+
+title: 'Guide: How To Center a <div/>'
+publishedAt: '2025-07-10'
+summary: 'A practical guide to centering a <div> using CSS and TailwindCSS for modern layouts.'
+------
+
+Centering a `<div>` is one of the most common layout tasks in web development, and also one of the most frequently misunderstood. Depending on the context (horizontal, vertical, or both), there are several reliable and modern ways to center a `<div>`.
+
+This guide walks you through the most effective techniques using **vanilla CSS** and **Tailwind CSS**.
+
+---
+
+## 1. Horizontal Centering with `margin: auto`
+
+### Vanilla CSS
+
+```html
+<div class="parent">
+  <div class="child">Centered</div>
+</div>
+
+<style>
+.parent {
+  width: 100%;
+}
+.child {
+  width: 200px;
+  margin: 0 auto;
+}
+</style>
+```
+
+### Tailwind CSS
+
+```html
+<div class="w-full">
+  <div class="w-52 mx-auto">Centered</div>
+</div>
+```
+
+---
+
+## 2. Centering Horizontally and Vertically with Flexbox
+
+### Vanilla CSS
+
+```html
+<div class="container">
+  <div class="box">Centered</div>
+</div>
+
+<style>
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.box {
+  width: 200px;
+  height: 100px;
+}
+</style>
+```
+
+### Tailwind CSS
+
+```html
+<div class="flex items-center justify-center h-screen">
+  <div class="w-52 h-24 bg-gray-100">Centered</div>
+</div>
+```
+
+---
+
+## 3. Absolute Position + Transform
+
+### Vanilla CSS
+
+```html
+<div class="wrapper">
+  <div class="centered">Centered</div>
+</div>
+
+<style>
+.wrapper {
+  position: relative;
+  height: 100vh;
+}
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+</style>
+```
+
+### Tailwind CSS
+
+```html
+<div class="relative h-screen">
+  <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+    Centered
+  </div>
+</div>
+```
+
+---
+
+## Which Should You Use?
+
+* Use **Flexbox** for layout-based centering.
+* Use **`margin: auto`** for simple horizontal alignment.
+* Use **absolute + transform** for full control, especially inside relative containers.
+
+With modern CSS and Tailwind, centering is no longer a headache, it's a tool. Use the method that fits your layout structure best.
+
+---
