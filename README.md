@@ -8,13 +8,13 @@
 
 ### Clone and Deploy
 
-Execute [`git clone`](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository) with [npm](https://npmjs.com) to bootstrap the example:
+Execute [`git clone`](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository) to bootstrap the example:
 
 ```bash
 git clone https://github.com/randseas/portfolio
 ```
 
-Install dependencies via npm
+Install dependencies via [npm](https://npmjs.com)
 
 ```bash
 npm install
