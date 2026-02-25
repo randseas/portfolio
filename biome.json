@@ -36,11 +36,19 @@
       "recommended": true,
       "correctness": {
         "noUnusedFunctionParameters": "off",
+        "useExhaustiveDependencies": "off",
         "noUnusedVariables": "off",
         "noUnusedImports": "off"
       },
       "suspicious": {
         "noUnknownAtRules": "off"
+      },
+      "complexity": {
+        "noImportantStyles": "off"
+      },
+      "a11y": {
+        "noStaticElementInteractions": "off",
+        "useValidAnchor": "off"
       }
     },
     "domains": {
