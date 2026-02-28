@@ -7,7 +7,7 @@ const nextConfig: NextConfig = {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "plus.nasa.gov",
+        hostname: "picsum.photos",
         pathname: "**",
       },
     ],

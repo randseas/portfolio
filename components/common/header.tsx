@@ -4,7 +4,7 @@ import React from "react";
 export default function Header() {
   const router = useRouter();
   return (
-    <header className="sticky z-8888 top-0 h-16.25 grid grid-cols-3 items-center justify-between w-full border-b border-neutral-900/70 bg-black/60 backdrop-blur-md px-48">
+    <header className="sticky z-50 top-0 h-16.25 grid grid-cols-3 items-center justify-between w-auto border border-neutral-900/70 bg-black/60 px-4 backdrop-blur-md mx-48">
       {/* Logo */}
       <div className="flex items-center justify-start">
         <a onClick={() => router.push("/")}>
@@ -17,7 +17,7 @@ export default function Header() {
           <li>
             <a
               onClick={() => router.push("/")}
-              className="transition-colors hover:text-white"
+              className="transition-colors cursor-pointer hover:text-white"
             >
               Home
             </a>
@@ -25,7 +25,7 @@ export default function Header() {
           <li>
             <a
               onClick={() => router.push("/projects")}
-              className="transition-colors hover:text-white"
+              className="transition-colors cursor-pointer hover:text-white"
             >
               Projects
             </a>
@@ -33,7 +33,7 @@ export default function Header() {
           <li>
             <a
               onClick={() => router.push("/about")}
-              className="transition-colors hover:text-white"
+              className="transition-colors cursor-pointer hover:text-white"
             >
               About
             </a>
@@ -41,7 +41,7 @@ export default function Header() {
           <li>
             <a
               onClick={() => router.push("/blog")}
-              className="transition-colors hover:text-white"
+              className="transition-colors cursor-pointer hover:text-white"
             >
               Blog
               <span className="text-neutral-400 text-sm px-1 rounded-lg py-1 bg-neutral-900/60 border border-neutral-800/60">
@@ -52,7 +52,7 @@ export default function Header() {
           <li>
             <a
               onClick={() => router.push("/contact")}
-              className="transition-colors hover:text-white font-semibold text-blue-400"
+              className="transition-colors cursor-pointer hover:text-white font-semibold text-blue-400"
             >
               Contact
             </a>
@@ -61,12 +61,7 @@ export default function Header() {
       </nav>
       {/* Actions */}
       <div className="flex items-center justify-end gap-4">
-        <button
-          type="button"
-          className="rounded-xl bg-blue-600 px-4 py-2 text-sm font-semibold text-white transition-all hover:bg-blue-700 active:scale-95"
-        >
-          Action Button
-        </button>
+        
       </div>
     </header>
   );

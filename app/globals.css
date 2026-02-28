@@ -26,14 +26,20 @@ body {
   @apply tracking-[-0.0015em];
 }
 
+#nprogress {
+  z-index: 9999 !important;
+}
+
 #nprogress .bar {
   background: #2563eb !important;
   height: 2px !important;
   transition: all 200ms ease-out !important;
+  z-index: 9999 !important;
 }
 
 #nprogress .peg {
   box-shadow:
     0 0 10px #2563eb,
     0 0 5px #2563eb !important;
+  z-index: 9999 !important;
 }

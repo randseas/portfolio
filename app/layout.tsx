@@ -21,7 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} antialiased`}>
+      <body className={`${inter.className} antialiased selection:bg-teal-500/20 selection:text-teal-300`}>
         <Providers>
           <Suspense fallback={null}>
             <ProgressBar />
