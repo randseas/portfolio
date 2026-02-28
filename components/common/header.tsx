@@ -4,7 +4,7 @@ import React from "react";
 export default function Header() {
   const router = useRouter();
   return (
-    <header className="sticky top-0 h-17 grid grid-cols-3 items-center justify-between w-full border-b border-white/10 bg-black/60 backdrop-blur-md px-48">
+    <header className="sticky z-8888 top-0 h-16.25 grid grid-cols-3 items-center justify-between w-full border-b border-neutral-900/70 bg-black/60 backdrop-blur-md px-48">
       {/* Logo */}
       <div className="flex items-center justify-start">
         <a onClick={() => router.push("/")}>

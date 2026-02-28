@@ -16,7 +16,7 @@ export default function Home() {
             <div className="flex flex-row items-center space-x-1.5 border border-neutral-800/60 bg-neutral-900/40 rounded-xl px-2.5 py-1">
               <span className="rounded-full w-2 h-2 bg-green-500"></span>
               <span className="text-[15px] font-normal text-neutral-100">
-                Open for work
+                check out this
               </span>
             </div>
             <h1 className="flex flex-col items-start text-start justify-start text-5xl leading-13 font-medium tracking-[-0.032em]">
@@ -26,9 +26,9 @@ export default function Home() {
                 <TypewriterComponent
                   options={{
                     strings: [
-                      "I build <span class='px-3 py-1 text-4xl border border-neutral-800/60 bg-neutral-900/40 text-neutral-100 rounded-xl'>scalable</span> apps.",
-                      "I build <span class='px-3 py-1 text-4xl border border-neutral-800/60 bg-neutral-900/40 text-neutral-100 rounded-xl'>modern</span> interfaces.",
-                      "I build <span class='px-3 py-1 text-4xl border border-neutral-800/60 bg-neutral-900/40 text-neutral-100 rounded-xl'>performant</span> backends.",
+                      "I build <span class='px-3 py-1 text-4xl bg-teal-500/20 text-teal-100 rounded-xl'>scalable</span> apps.",
+                      "I build <span class='px-3 py-1 text-4xl bg-blue-500/20 text-blue-100 rounded-xl'>modern</span> interfaces.",
+                      "I build <span class='px-3 py-1 text-4xl bg-red-500/20 text-red-100 rounded-xl'>performant</span> backends.",
                     ],
                     autoStart: true,
                     loop: true,
