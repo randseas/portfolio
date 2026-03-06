@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, JetBrains_Mono } from "next/font/google";
 import { Suspense } from "react";
 import Providers from "@/app/providers";
 import ProgressBar from "@/components/nprogress";
@@ -7,6 +7,11 @@ import "./globals.css";
 
 const inter = Inter({
   subsets: ["latin"],
+});
+
+const jetBrainsMono = JetBrains_Mono({
+  subsets: ["latin"],
+  variable: "--font-mono",
 });
 
 export const metadata: Metadata = {
@@ -21,7 +26,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} antialiased selection:bg-teal-500/20 selection:text-teal-300`}>
+      <body
+        className={`${inter.className} ${jetBrainsMono.variable} antialiased selection:bg-violet-500/15 selection:text-violet-400 min-h-screen flex flex-col`}
+      >
         <Providers>
           <Suspense fallback={null}>
             <ProgressBar />

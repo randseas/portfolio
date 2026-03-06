@@ -1,50 +1,123 @@
 "use client";
-import { ChevronRightIcon } from "lucide-react";
 import { useRouter } from "next/navigation";
-import TypewriterComponent from "typewriter-effect";
-import Header from "@/components/common/header";
+
+const Progress = ({ a, b }: { a: string; b: string }) => (
+  <div className="font-mono tracking-wide">
+    <span className="opacity-100">{a}</span>&nbsp;
+    <span className="opacity-50">/</span>&nbsp;
+    <span className="opacity-50">{b}</span>
+  </div>
+);
+
+const Page = ({ page }: { page: string }) => (
+  <div className="font-mono tracking-wide">
+    <span className="opacity-50">{"//"}</span>&nbsp;
+    <span className="opacity-100">{page}</span>
+  </div>
+);
 
 export default function Home() {
   const router = useRouter();
   return (
-    <main className="relative bg-background overflow-hidden">
-      {/* Hero */}
-      <section className="flex flex-col items-start justify-center w-full min-h-[85vh] px-48">
-        <div className="flex flex-col items-start space-y-4">
-          <h1 className="flex flex-col items-start text-start justify-start text-5xl leading-13 font-medium tracking-[-0.032em]">
-            <span>I'm randseas,</span>
-            <span>full stack developer,</span>
-            <span className="flex relative items-center gap-3 h-14">
-              <TypewriterComponent
-                options={{
-                  strings: [
-                    `I build <span class="px-3 py-1 text-4xl bg-teal-500/20 text-teal-100">scalable</span> apps.`,
-                    `I build <span class="px-3 py-1 text-4xl bg-blue-500/20 text-blue-100">modern</span> interfaces.`,
-                    `I build <span class="px-3 py-1 text-4xl bg-red-500/20 text-red-100">performant</span> backends.`,
-                  ],
-                  autoStart: true,
-                  loop: true,
-                  delay: 50,
-                  deleteSpeed: 30,
-                }}
+    <main className="relative bg-background overflow-hidden flex-1 flex flex-col">
+      <section id="hero" className="relative flex-1 flex flex-col h-full min-h-[92vh]">
+        <div className="grid grid-cols-3 grid-rows-1 bg-neutral-900/25 w-full py-2 px-48 border-y border-neutral-900/60">
+          <span className="w-auto flex flex-row items-center justify-start">
+            <Page page="home" />
+          </span>
+          <span className="w-auto flex flex-row items-center justify-center">
+            <Progress a="0.1" b="0.4" />
+          </span>
+          <span className="w-auto flex flex-row items-center justify-end">
+            <svg
+              width="8"
+              height="8"
+              viewBox="0 0 12 12"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              className="opacity-50"
+            >
+              <circle
+                cx="6"
+                cy="6"
+                r="4.5"
+                fill="currentColor"
+                stroke="currentColor"
+                strokeWidth="1"
               />
-            </span>
-          </h1>
-          <div className="flex flex-row items-center gap-2">
+            </svg>
+          </span>
+        </div>
+        <div className="flex-1 flex flex-col items-start justify-center pb-24 h-full mx-48 border-x border-dashed border-neutral-900/60">
+          <span className="font-mono">
+            [full stack developer]
+          </span>
+          <span className="text-4xl font-mono">
+            randseas
+          </span>
+          <div className="flex flex-row items-center justify-start w-auto gap-1.5 mt-1.5">
             <button
               type="button"
-              className="flex flex-row items-center tracking-[-0.015em] text-[17px] shadow-sm shadow-teal-700/30 hover:shadow-md active:shadow-md bg-teal-500 hover:bg-teal-600 active:bg-teal-700 active:scale-[0.98] transition-[scale,background-color] ease-in-out duration-200 cursor-pointer text-teal-50 font-medium px-3.5 py-2"
-              onClick={() => router.push("/about")}
+              className="px-3 py-2 text-[16px] font-mono border border-violet-500 bg-violet-500 text-violet-50 hover:bg-violet-600 hover:border-violet-600 hover:text-violet-100 cursor-pointer transition-[background-color, text-color, border-color, scale] ease-in-out duration-200"
             >
-              About me
+              Projects
             </button>
             <button
               type="button"
-              className="flex flex-row items-center tracking-[-0.015em] text-[17px] shadow-sm shadow-blue-700/10 hover:shadow-md active:shadow-md bg-blue-500/20 hover:bg-blue-600/20 active:bg-blue-700/20 active:scale-[0.98] transition-[scale,background-color] ease-in-out duration-200 cursor-pointer text-blue-200 font-medium pl-3.5 pr-3 py-2"
-              onClick={() => router.push("/projects")}
+              className="px-3 py-2 text-[16px] font-mono border border-teal-500 text-teal-500 hover:bg-teal-500 hover:text-teal-50 cursor-pointer transition-[background-color, text-color, border-color, scale] ease-in-out duration-200"
             >
-              <span>View projects&nbsp;</span>
-              <ChevronRightIcon size={20} />
+              Contact
+            </button>
+          </div>
+        </div>
+      </section>
+      <section id="hero" className="relative flex-1 flex flex-col h-full">
+        <div className="grid grid-cols-3 grid-rows-1 bg-neutral-900/25 w-full py-2 px-48 border-y border-neutral-900/60">
+          <span className="w-auto flex flex-row items-center justify-start">
+            <Page page="home" />
+          </span>
+          <span className="w-auto flex flex-row items-center justify-center">
+            <Progress a="0.1" b="0.4" />
+          </span>
+          <span className="w-auto flex flex-row items-center justify-end">
+            <svg
+              width="8"
+              height="8"
+              viewBox="0 0 12 12"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              className="opacity-50"
+            >
+              <circle
+                cx="6"
+                cy="6"
+                r="4.5"
+                fill="currentColor"
+                stroke="currentColor"
+                strokeWidth="1"
+              />
+            </svg>
+          </span>
+        </div>
+        <div className="flex-1 flex flex-col items-start justify-center pb-24 h-full mx-48 border-x border-dashed border-neutral-900/60">
+          <span className="font-mono">
+            [full stack developer]
+          </span>
+          <span className="text-4xl font-mono">
+            randseas
+          </span>
+          <div className="flex flex-row items-center justify-start w-auto gap-1.5 mt-1.5">
+            <button
+              type="button"
+              className="px-3 py-2 text-[16px] font-mono border border-violet-500 bg-violet-500 text-violet-50 hover:bg-violet-600 hover:border-violet-600 hover:text-violet-100 cursor-pointer transition-[background-color, text-color, border-color, scale] ease-in-out duration-200"
+            >
+              Projects
+            </button>
+            <button
+              type="button"
+              className="px-3 py-2 text-[16px] font-mono border border-teal-500 text-teal-500 hover:bg-teal-500 hover:text-teal-50 cursor-pointer transition-[background-color, text-color, border-color, scale] ease-in-out duration-200"
+            >
+              Contact
             </button>
           </div>
         </div>

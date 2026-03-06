@@ -1,5 +1,15 @@
 @import "tailwindcss";
 
+* {
+  -webkit-user-drag: none !important;
+  -moz-user-drag: none !important;
+  -o-user-drag: none !important;
+}
+
+img {
+  pointer-events: none !important;
+}
+
 :root {
   --background: #ffffff;
   --foreground: #000000;
@@ -8,8 +18,8 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-inter: var(--font-inter);
+  --font-mono: var(--font-mono);
 }
 
 @media (prefers-color-scheme: dark) {
